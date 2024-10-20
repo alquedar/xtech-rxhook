@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* xpayment route listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('Hi, this is the xpayment route.');
 });
 
 module.exports = router;
