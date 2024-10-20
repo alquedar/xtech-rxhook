@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "dotenvx run -- node ./bin/www"
+    "start": "dotenvx run -- pm2 start --name x-hook ./bin/www",
+    "dev": "dotenvx run -- nodemon ./bin/www"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.20.0",
@@ -15,5 +16,18 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "pm2": "^5.4.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/pg": "^8.11.10",
+    "@types/ws": "^8.5.12",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "prettier": "3.3.3",
+    "prettier-eslint": "^16.3.0"
   }
 }
