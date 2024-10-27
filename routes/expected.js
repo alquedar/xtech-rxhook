@@ -11,6 +11,11 @@ router.get('/200', function (req, res, next) {
   res.status(200).send('OK');
 });
 
+router.get('/202', function (req, res, next) {
+  console.log(req.body);
+  res.status(202).send('Accepted');
+});
+
 router.get('/500', function (req, res, next) {
   console.log(req.body);
   res.status(500).send('Internal Server Error');
